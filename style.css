@@ -1,0 +1,599 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100;800;900&display=swap');
+
+/* 每個網站基本設定 */
+/* 基本清除 也可用eric reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Catamaran', sans-serif;
+    color: #FFF;
+}
+
+.btn {
+    /* 不會滿版 且可控制寬高 */
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
+    background-color: #FFF;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 800;
+    border-radius: 2.5rem;
+    letter-spacing: 0.05rem;
+    /* 原本加一個透明邊框預留位置 */
+    border: solid 2px transparent;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #FFF;
+    border: solid 2px #FFF;
+    transition: 0.35s;
+}
+
+/* banner區 */
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    /* 預設垂直漸層 */
+    background-image: url(images/bg-pattern-logos.png), linear-gradient(#e70112 16%, #b20722 76%);
+}
+#banner::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    background-color: #e70112;
+    /* 剪裁成三角形 */
+    /* 多邊形:左上角,右上角,右下角,左下角  順時針方向 */
+    /* clip-path: polygon(0 100%, 100% 0,100% 100%); */
+    clip-path: polygon(100% 0,100% 0,100% 100%,0 100%);
+}
+#banner .row {
+    display: flex;
+    width: 80%;
+}
+/* 文案區 */
+#banner .col:first-child {
+    width: 29rem;
+}
+#banner h2 span {
+    display: block;
+}
+#banner h2 span:first-child {
+    font-size: 1.75rem;
+}
+#banner h2 span:last-child {
+    font-size: 11rem;
+    font-weight: 900;
+}
+#banner p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+}
+/* 圖片區 */
+#banner picture {
+    position: absolute;
+}
+/* banner-1 */
+.mario1 {
+    width: 35%;
+    /* both最後停在to的位置 ease-in-out 一開始和結束比較慢  */
+    animation: mario1 12s both ease-in-out infinite;
+}
+/* 動畫 */
+@keyframes mario1 {
+    0% {
+        top: 100vh;
+        right: 20%;
+        opacity: 0;
+    }
+    10% {
+        top: -5vh;
+        right: 20%;
+        opacity: 1;
+    }
+    20% {
+        top: -5vh;
+        right: 20%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 20%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 100vh;
+        right: 20%;
+        opacity: 0;
+    }
+}
+.luigi{
+    width: 20%;
+    /* 0.35s延遲晚一點進來 */
+    animation: luigi 12s .35s both ease-in-out infinite;
+}
+@keyframes luigi {
+    0% {
+        top: 100vh;
+        right: 5%;
+        opacity: 0;
+    }
+    10% {
+        top: 20vh;
+        right: 5%;
+        opacity: 1;
+    }
+    20% {
+        top: 20vh;
+        right: 5%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 5%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 20vh;
+        right: 5%;
+        opacity: 0;
+    }
+}
+
+.brick{
+    width: 40%;
+    animation: brick 12s .45s both ease-in-out infinite;
+}
+@keyframes brick {
+    0% {
+        top: 10vh;
+        right: -100%;
+        opacity: 0;
+    }
+    10% {
+        top: 10vh;
+        right: -4%;
+        opacity: 1;
+    }
+    20% {
+        top: 10vh;
+        right: -4%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 10vh;
+        right: -100%;
+        opacity: 0;
+    }
+}
+/* banner-2 */
+.mario2 {
+    width: 32%;
+    animation: mario2 12s 4s both ease-in-out infinite;
+}
+/* 動畫 */
+@keyframes mario2 {
+    0% {
+        top: 100vh;
+        right: 25%;
+        opacity: 0;
+    }
+    10% {
+        top: 10vh;
+        right: 25%;
+        opacity: 1;
+    }
+    20% {
+        top: 10vh;
+        right: 25%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 25%;
+        opacity: 0;
+    }
+
+    100% {
+        top: 100vh;
+        right: 25%;
+        opacity: 0;
+    }
+}
+.peach{
+    width: 17%;
+    animation: peach 12s 4.35s both ease-in-out infinite;
+}
+@keyframes peach {
+    0% {
+        top: 100vh;
+        right: 17%;
+        opacity: 0;
+    }
+    10% {
+        top: 25vh;
+        right: 17%;
+        opacity: 1;
+    }
+    20% {
+        top: 25vh;
+        right: 17%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 17%;
+        opacity: 0;
+    }
+    100% {
+        top: 100vh;
+        right: 17%;
+        opacity: 0;
+    }
+}
+.pipe{
+    width: 20%;
+    animation: pipe 12s 4.45s both ease-in-out infinite;
+}
+@keyframes pipe {
+    0% {
+        top: 100vh;
+        right: 2%;
+        opacity: 0;
+    }
+    10% {
+        top: 5vh;
+        right: 2%;
+        opacity: 1;
+    }
+    20% {
+        top: 5vh;
+        right: 2%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 2%;
+        opacity: 0;
+    }
+    100% {
+        top: 100vh;
+        right: 2%;
+        opacity: 0;
+    }
+}
+/* banner-3 */
+.mario3 {
+    width: 41%;
+    animation: mario3 12s 8s both ease-in-out infinite;
+}
+/* 動畫 */
+@keyframes mario3 {
+    0% {
+        top: 100vh;
+        right: 15%;
+        opacity: 0;
+    }
+    10% {
+        top: 15vh;
+        right: 15%;
+        opacity: 1;
+    }
+    20% {
+        top: 15vh;
+        right: 15%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 15%;
+        opacity: 0;
+    }
+    100% {
+        top: 100vh;
+        right: 15%;
+        opacity: 0;
+    }
+}
+.toad{
+    width: 12%;
+    animation: toad 12s 8.35s both ease-in-out infinite;
+}
+@keyframes toad {
+    0% {
+        top: 100vh;
+        right: 14%;
+        opacity: 0;
+    }
+    10% {
+        top: 40vh;
+        right: 14%;
+        opacity: 1;
+    }
+    20% {
+        top: 40vh;
+        right: 14%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 14%;
+        opacity: 0;
+    }
+    100% {
+        top: 100vh;
+        right: 14%;
+        opacity: 0;
+    }
+}
+.star{
+    width: 22%;
+    animation: star 12s 8.45s both ease-in-out infinite;
+}
+@keyframes star {
+    0% {
+        top: 100vh;
+        right: 2%;
+        opacity: 0;
+    }
+    10% {
+        top: 15vh;
+        right: 2%;
+        opacity: 1;
+    }
+    20% {
+        top: 15vh;
+        right: 2%;
+        opacity: 1;
+    }
+    30% {
+        top: 100vh;
+        right: 2%;
+        opacity: 0;
+    }
+    100% {
+        top: 100vh;
+        right: 2%;
+        opacity: 0;
+    }
+}
+/* main */
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+.title1{
+    font-size: 3.5rem;
+    margin-bottom: 2vh;
+}
+.title2{
+    font-size: 1.6rem;
+    letter-spacing: 0.05rem;
+    margin: 1rem 0;
+}
+/* 灰色小圓點 卡片四個角落 */
+.point_t,.point_b{
+    position: relative;
+    position: absolute;
+    width: 100%;
+}
+.point_t::before,.point_t::after,
+.point_b::before,.point_b::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(145deg,#f6f6f6,#cfcfcf);
+    box-shadow: 1px 1px 10px #828282,1px 1px 10px #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+/* point_t */
+.point_t{
+    top: 25px;
+}
+.point_t::before{
+    content: "";
+    top: 0;
+    left: 15px;
+}
+.point_t::after{
+    content: "";
+    top: 0;
+    right: 15px;
+}
+/* point_b */
+.point_b{
+    bottom: 25px;
+}
+.point_b::before{
+    content: "";
+    top: 0;
+    left: 15px;
+}
+.point_b::after{
+    content: "";
+    top: 0;
+    right: 15px;
+}
+/* news區 */
+#news{
+    background-color: #e70112;
+}
+.list-box{
+    display: flex;
+    width: 75%;
+}
+.card-item{
+    position: relative;
+    margin: 30px;
+    padding: 25px 25px 4rem ;
+    flex: 1;
+    /* 背景灰黑條紋 */
+    background-image: repeating-linear-gradient(-45deg,#4b4b4b,#4b4b4b 6px,#2a2929 0,#2a2929 12px);
+    border-radius: 15px;
+}
+#news .scenes{
+    /* 第四個值-10px 讓影子往裡面收 更自然的一種寫法 */
+    box-shadow: 0 0 40px -10px black;
+    /* 轉場秒速 */
+    transition: 1s;
+    transform-origin: bottom;
+}
+#news .role{
+    position: absolute;
+    top: -5vh;
+    left: 18%;
+    width: 65%;
+    transition: 1s;
+}
+/* 淡入淡出opacit主要0 動畫1 */
+#news .content{
+    position: absolute;
+    bottom: 6rem;
+    opacity: 0;
+    left: 25px;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.05rem;
+    /* 多行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    transition: 1s;
+}
+#news .date{
+    font-size: 1.2rem;
+    margin-top: 1.5vh;
+}
+/* 透視 旋轉 傾斜 */
+#news .card-item:hover .scenes{
+    transform: perspective(1000px) rotateX(30deg) skewX(-20deg);
+}
+/* 縮放 */
+#news .card-item:hover .role{
+    transform: scale(1.2);
+}
+#news .card-item:hover .content{
+    transform: translateY(4.5rem);
+    opacity: 1;
+}
+#news .btn{
+    margin-bottom: 10vh;
+}
+/* product區 */
+#product{
+    padding-bottom: 250px;
+    /* 漸變色 -15deg角度斜著漸變 16%位置是藍色 76%是紫色 */
+    background-image: url(images/bg-pattern-logos.png), linear-gradient(-15deg,#bc00b7 16% , rgb(51, 67, 189) 76%);
+}
+#product .list-box{
+    margin-top: 5vh;
+}
+#product .card-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* 3D環境 */
+    transform-style: preserve-3d;
+}   
+/* 物件漂浮起來 */
+#product .card-item,#product .content,#product .btn{
+    transform: translateZ(50px);
+}
+#product .btn{
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 20px 0;
+}
+#product .role{
+    position: relative;
+    width: 100%;
+    height: 26vh;
+}
+#product .role img{
+    width: auto;
+    height: 150%;
+    position: absolute;
+    top: -12vh;
+    left: 2%;
+}
+#product .content{
+    text-shadow: 0 0 20px #2a2929;
+}
+#product p{
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.05rem;
+}
+#product .btn{
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 20px 0;
+    /* box-shadow: 0 0 20px #2a2929; */
+    background: linear-gradient(145deg,#f6f6f6,#cfcfcf);
+    box-shadow: 1px 1px 10px #828282,1px 1px 10px #000;
+}
+/*footer區  */
+footer{
+    position: relative;
+    height: 200px;
+    background-color: #e70112;
+}
+footer::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -200px;
+    z-index: 1;
+    width: 100%;
+    height: 200px;
+    background-color: #e70112;
+    clip-path: polygon(100% 0, 100% 0,100% 100%,0 100%);
+}
+footer div{
+    position: absolute;
+    top: 20vh;
+    left: 15%;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.05rem;   
+}
+footer div h4{
+    font-size: 0.1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.05rem;  
+}

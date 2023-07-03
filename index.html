@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon-32x32.png">
+    <title>Mario</title>
+    <meta name="robots" content="noindex,nofollow" />
+</head>
+
+<body>
+    <header id="banner">
+        <div class="row">
+            <!-- 文案區 -->
+            <div class="col">
+                <h2>
+                    <span>Official home of</span><br>
+                    <span>Mario</span>
+                </h2>
+                <p>If you’re a Mario fan—or even if you’ve just found out about him today—you’ve come to the right
+                    place! Learn everything there is to know about that multitalented, mustached marvel, and check out
+                    the latest news, videos, and more. </p>
+                <a class="btn" href="#">Meet Mario! ></a>
+            </div>
+            <!-- 圖片區 -->
+            <div class="col">
+                <div class="banner-1">
+                    <picture class="brick"><img src="images/banner1-brick-row.png" alt=""></picture>
+                    <picture class="luigi"><img src="images/banner1-luigi.png" alt=""></picture>
+                    <picture class="mario1"><img src="images/banner1-mario.png" alt=""></picture>
+                </div>
+                <div class="banner-2">
+                    <picture class="pipe"><img src="images/banner2-pipe.png" alt=""></picture>
+                    <picture class="peach"><img src="images/banner2-peach.png" alt=""></picture>
+                    <picture class="mario2"><img src="images/banner2-mario.png" alt=""></picture>
+                </div>
+                <div class="banner-3">
+                    <picture class="star"><img src="images/banner3-star.png" alt=""></picture>
+                    <picture class="toad"><img src="images/banner3-toad.png" alt=""></picture>
+                    <picture class="mario3"><img src="images/banner3-mario.png" alt=""></picture>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- news區 -->
+        <section id="news">
+            <h2 class="title1">Mario in the news</h2>
+            <div class="list-box">
+                <div class="card-item">
+                    <figure class="scenes"><img src="images/scenes_1.jpg" alt=""></figure>
+                    <figure class="role"><img src="images/characters-1.png" alt=""></figure>
+                    <p class="date">May 19, 2023</p>
+                    <h3 class="title2">Race newly added course GCN Mushroom</h3>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illum culpa,
+                        dolorem consequuntur, quos ipsa dignissimos perferendis libero corrupti enim, repudiandae
+                        eligendi cumque ipsam et porro voluptas atque exercitationem placeat.</p>
+                </div>
+                <div class="card-item">
+                    <figure class="scenes"><img src="images/scenes_2.jpg" alt=""></figure>
+                    <figure class="role"><img src="images/characters-2.png" alt=""></figure>
+                    <p class="date">May 6, 2023</p>
+                    <h3 class="title2">Have a smashing time in the Bowser Tour</h3>
+                    <p class="content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore illum culpa,
+                        dolorem consequuntur, quos ipsa dignissimos perferendis libero corrupti enim, repudiandae
+                        eligendi cumque ipsam et porro voluptas atque exercitationem placeat.</p>
+                </div>
+            </div>
+            <a href="" class="btn">See more news</a>
+        </section>
+        <!--product區 -->
+        <section id="product">
+            <figure><img src="images/wavy-line.png" alt="波浪裝飾"></figure>
+            <h2 class="title1">Mario on Nintendo Switch</h2>
+            <div class="list-box">
+                <div class="card-item card-3d">
+                    <figure class="role"><img src="images/mario_1.png" alt=""></figure>
+                    <div class="content">
+                        <h3 class="title2">Mario Kart™ 8 Deluxe</h3>
+                        <p>Race with Mario and friends anytime, anywhere!</p>
+                    </div>
+                    <a class="btn" href="">See the timeline ></a>
+                    <div class="point_t"></div>
+                    <div class="point_b"></div>
+                </div>
+                <div class="card-item card-3d">
+                    <figure class="role"><img src="images/mario_2.png" alt=""></figure>
+                    <div class="content">
+                        <h3 class="title2">MSuper Mario™ 3D World + Bowser's Fury</h3>
+                        <p>Enjoy 2 Mario adventures in one—a platformer with lively multiplayer + a bonus adventure.
+                        </p>
+                    </div>
+                    <a class="btn" href="">See the timeline ></a>
+                    <div class="point_t"></div>
+                    <div class="point_b"></div>
+                </div>
+                <div class="card-item card-3d">
+                    <figure class="role"><img src="images/mario_3.png" alt=""></figure>
+                    <div class="content">
+                        <h3 class="title2">New Super Mario Bros.™ U Deluxe</h3>
+                        <p>Join Mario, Luigi, and pals for single-player or multiplayer fun anytime, anywhere!</p>
+                    </div>
+                    <a class="btn" href="">See the timeline ></a>
+                    <div class="point_t"></div>
+                    <div class="point_b"></div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <!-- footer區 -->
+    <footer>
+        <div>
+            <h3>&copy;2023 Mario</h3>
+            <h4>此為練習作品，非正式營運網站</h4>
+        </div>
+    </footer>
+
+    <!-- 套用3D -->
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card-3d"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
+</body>
+
+</html>
