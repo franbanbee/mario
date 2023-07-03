@@ -592,8 +592,9 @@ footer div{
     line-height: 1.3rem;
     letter-spacing: 0.05rem;   
 }
-footer div h4{
+footer small{
     font-size: 0.1rem;
     line-height: 1.3rem;
     letter-spacing: 0.05rem;  
+    color: rgb(255, 255, 255,.7);
 }
